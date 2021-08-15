@@ -86,8 +86,9 @@ body {
   background-color: var(--color-white);
   display: flex;
   align-items: center;
-  padding: var(--base-space);
+  padding: var(--base-space) 30px;
   margin-bottom: var(--base-space);
+  border-radius:3px;
 }
 
 .item.invisible {
@@ -98,9 +99,8 @@ body {
 .item__thumbnail {
   width: var(--size-thumbnail);
   height: var(--size-thumbnail);
+  margin-right:10px;
 }
-
-.item__description {
-  margin-left: var(--base-space);
-  font-size: var(--font-size);
-}
+.item span{position:relative;}
+.item span::after{content:',';display: inline-block;margin-right:3px;}
+.item span:last-child::after{display: none;}
